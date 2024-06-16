@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f48fb1, #ce93d8);
+    /* Gradient background */
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    /* Darkened background for header */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    animation: pulse 2s infinite alternate;
+}
+
+header p {
+    font-size: 1.2em;
+    animation: slideInLeft 2s forwards;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff80ab;
+    /* Hover color */
+}
+
+.section {
+    padding: 60px 0;
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    margin-bottom: 30px;
+    animation: rotateScale 2s infinite alternate;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #ff80ab;
+    /* Underline color */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-image {
+    display: block;
+    margin: auto;
+    width: 350px;
+    /* Adjust width as needed */
+    height: auto;
+    border-radius: 50%;
+    /* Makes the image round */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Optional: Adds a subtle shadow */
+    margin-bottom: 30px;
+    /* Optional: Adjust spacing */
+}
+
+
+
+.project {
+    background: #fff;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    /* Lift on hover */
+}
+
+.project h3 {
+    color: #673ab7;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.project p {
+    color: #757575;
+    line-height: 1.5;
+    font-size: 1.2em;
+}
+
+.btn {
+    display: inline-block;
+    background: #673ab7;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.2em;
+}
+
+.btn:hover {
+    background: #9575cd;
+    transform: scale(1.1);
+    /* Scale up on hover */
+}
+
+.footer {
+    background: rgba(0, 0, 0, 0.8);
+    /* Darkened background for footer */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links li a {
+    color: #fff;
+    font-size: 2em;
+    transition: transform 0.3s ease;
+}
+
+.social-links li a:hover {
+    transform: scale(1.5);
+    /* Scale up on hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .section h2 {
+        font-size: 2.5em;
+    }
+
+    .project {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 1em;
+    }
+
+    .social-links li a {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Additional animations for specific sections */
+#about .container {
+    animation: fadeIn 2s forwards;
+}
+
+#contact .container {
+    animation: fadeIn 2s forwards;
+}
